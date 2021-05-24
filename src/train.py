@@ -9,13 +9,22 @@ from sklearn.metrics import confusion_matrix
 from utils import plot_confusion_matrix, plot_training_curve
 import argparse
 import pickle
+import os
+import random
 
 # argparser
 parser = argparse.ArgumentParser(description='Hyperparameters for the experiment')
 parser.add_argument('--model_type', action="store", dest="model_type", type=str, default='hybrid_pqc')
 parser.add_argument('--learning_rate', action="store", dest="learning_rate", type=float, default=0.1)
 parser.add_argument('--epochs', action="store", dest="epochs", type=int, default=20)
+parser.add_argument('--seed', action="store", dest="seed", type=int, default=0)
 args = parser.parse_args()
+
+# set seeds
+tf.random.set_seed(args.seed)
+np.random.seed(args.seed)
+random.seed(args.seed)
+os.environ['PYTHONHASHSEED'] = str(args.seed)
 
 
 def prepare_classic_dataset():
