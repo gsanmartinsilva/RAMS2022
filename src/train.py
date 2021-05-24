@@ -152,7 +152,6 @@ if __name__ == "__main__":
     print(f'{"test_accuracy"}: {round(100 * output["test_accuracy"], 2)}')
 
     # save output as pkl}
-    print(output)
     output_file = open("output.pkl", "wb")
     pickle.dump(output, output_file)
     output_file.close()
