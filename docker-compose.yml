@@ -1,0 +1,20 @@
+version: '3'
+services:
+    terminal:
+        build: .
+        volumes:
+        - $PWD/logs:/root/.guild
+        - $PWD/src:/project/src
+        - $PWD/data:/project/data
+        tty: true 
+    
+    jupyter:
+        build: .
+        ports:
+        - "8888:8888"
+        volumes:
+        - $PWD/notebooks:/project/notebooks
+        - $PWD/data:/project/data
+        command: "jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root"
+    
+    
