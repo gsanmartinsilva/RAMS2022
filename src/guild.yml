@@ -6,14 +6,14 @@
 - model: simple_hybrid_model
   operations:
     train:
-      main: src/train
+      main: train
       description: Train a simple hybrid PQC-NN model.
       flags-dest: args
       flags-import: all
       output-scalars:
         - '^(\key): (\value)'
       requires:
-        - file: data/data_mfpt_3_classes.npz
+        - file: ../data/data_mfpt_3_classes.npz
           target-type: copy
       flags:
         model_type: 'simple_hybrid_model'
