@@ -87,7 +87,7 @@ class QML:
         x = data['x']
         y = data['y']
         # separate into test and train
-        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.33)
+        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.20)
         # normalize
         scaler = MinMaxScaler(feature_range=(0, np.pi))
         x_train = scaler.fit_transform(x_train)

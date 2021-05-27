@@ -3,7 +3,6 @@ services:
     terminal:
         build: .
         volumes:
-        - $PWD/logs:/root/.guild
         - $PWD/src:/project/src
         - $PWD/data:/project/data
         - $PWD/docs:/project/docs
