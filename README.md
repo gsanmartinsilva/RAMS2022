@@ -15,8 +15,13 @@ docker-compose exec terminal bash
 
 ## How to reproduce the results of the paper
 
+Go into the `/src` folder
+```
+cd src/
+```
+
 From inside the container, run:
 ```
-python src/train.py --model_type simple_hybrid_pqc --epochs 150 --n_runs 25 --learning_rate 0.01
+python train.py --model_type simple_hybrid_pqc --epochs 150 --n_runs 25 --learning_rate 0.01
 ```
-Images will be in `docs/figures/`, numerical results will be printed to the terminal and also saved as `.csv` into `docs/results`
+Figures will be in `docs/figures/`, numerical results will be printed to the terminal and also saved as `.csv` into `docs/results/`
