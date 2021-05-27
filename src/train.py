@@ -177,5 +177,5 @@ if __name__ == "__main__":
     print('\n\n\nRaw results:\n', df.to_string())
     print('\n\n\nAverage results:\n', df.describe().to_string())
     # save results
-    df.to_csv(f'../docs/results/{args.model_type}_results.csv')
-    df.to_csv(f'../docs/results/{args.model_type}_average_results.csv')
+    df.to_csv(f'../docs/results/{args.model_type}_results.csv', sep=';')
+    df.to_csv(f'../docs/results/{args.model_type}_average_results.csv', sep=';')
