@@ -3,17 +3,17 @@ import numpy as np
 import itertools
 
 
-def plot_training_curve(y, y_label):
-    plt.figure(figsize=(10, 10))
-    plt.plot(y)
+def plot_training_curve(y, y_label, n, title='plot'):
+    plt.figure(figsize=(5, 5))
+    plt.plot(y, marker='v', markersize=2)
     plt.xlabel("Epochs")
     plt.ylabel(y_label)
     plt.grid()
     plt.tight_layout()
-    plt.savefig(y_label + '.svg')
+    plt.savefig(title + f'_{n}' + '.svg')
 
 
-def plot_confusion_matrix(cm, classes, normalize=False, title='Confusion matrix', cmap=plt.cm.Blues, show=False):
+def plot_confusion_matrix(cm, classes, n, normalize=False, title='Confusion matrix', cmap=plt.cm.Blues, show=False):
 
     """
     DESCRIPCION: Funcion que sirve para plotear una matriz de confusion.
@@ -56,4 +56,4 @@ def plot_confusion_matrix(cm, classes, normalize=False, title='Confusion matrix'
     plt.ylabel('True label', fontsize=35)
     plt.xlabel('Predicted label', fontsize=35)
     plt.tight_layout()
-    plt.savefig(title + '.svg')
+    plt.savefig(title + f'_{n}' + '.svg')

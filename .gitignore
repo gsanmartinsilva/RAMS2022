@@ -2,3 +2,5 @@ logs
 .vscode
 .devcontainer
 .ipynb_checkpoints
+*.pyc
+src/__pycache__/utils.cpython-38.pyc
