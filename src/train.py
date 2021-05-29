@@ -13,7 +13,7 @@ import os
 import random
 
 
-# argparser
+# argparser!
 parser = argparse.ArgumentParser(description='Hyperparameters for the experiment')
 parser.add_argument('--model_type', action="store", dest="model_type", type=str, default='hybrid_pqc')
 parser.add_argument('--learning_rate', action="store", dest="learning_rate", type=float, default=0.1)
