@@ -1,4 +1,4 @@
-# Code and paper for the 2021 ASME SERAD student contest
+# Code for the 2021 ASME SERAD student contest
 
 ## How to build the image and enter the container
 From the same folder as the `Dockerfile` file, run:
