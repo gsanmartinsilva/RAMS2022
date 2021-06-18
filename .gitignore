@@ -3,7 +3,7 @@ logs
 .devcontainer
 .ipynb_checkpoints
 *.pyc
-src/__pycache__/utils.cpython-38.pyc
+src/__pycache__/*.pyc
 *.svg
 !Loss_run_1.svg
 !Acc_run_1.svg
